@@ -54,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'community_site.urls'
@@ -148,3 +149,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 PAYSTACK_TEST_KEY = config('PAYSTACK_TEST_KEY')
 # PAYSTACK_PUBLIC_KEY = config('PAYSTACK_PUBLIC_KEY')
 # PAYSTACK_SECRET_KEY = config('PAYSTACK_SECRET_KEY')
+
+# Render deployment
+if not DEBUG:
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
