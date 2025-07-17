@@ -1,0 +1,80 @@
+{% extends 'core/base.html' %}
+{% block content %}
+{% load static %}
+<!-- Hero Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="position-relative rounded overflow-hidden shadow">
+      <img src="{% static 'core/images/africa_emp.jpeg' %}" class="img-fluid w-100" alt="Banner Image" style="max-height: 500px; object-fit: cover;">
+      
+      <!-- Text Overlay -->
+      <div class="position-absolute top-50 start-50 translate-middle text-center text-white px-3" style="max-width: 90%;">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 style="color: black; font-weight: bold;" class="fw-bold display-5">Resources</h1>
+        <p style="color: black;" class="lead mt-2">
+          Explore helpful articles and tools for individuals affected by addiction and their loved ones.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-4">For Individuals Living with Addiction</h2>
+    <div class="row g-4">
+      {% for res in individual_resources %}
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">{{ res.title }}</h5>
+            <p class="card-text">{{ res.description|truncatewords:25 }}</p>
+            {% if res.link %}
+              <a href="{{ res.link }}" class="btn btn-sm btn-outline-primary" target="_blank">Read More</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% empty %}
+        <p>No individual resources available.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold mb-4">For Families and Caregivers</h2>
+    <div class="row g-4">
+      {% for res in family_resources %}
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">{{ res.title }}</h5>
+            <p class="card-text">{{ res.description|truncatewords:25 }}</p>
+            {% if res.link %}
+              <a href="{{ res.link }}" class="btn btn-sm btn-outline-primary" target="_blank">Read More</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% empty %}
+        <p>No family resources available.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

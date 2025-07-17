@@ -1,0 +1,36 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold mb-4 text-center">Find a Rehabilitation Center</h2>
+    <div class="row g-4">
+      {% for center in centers %}
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            {% if center.image %}
+              <img src="{{ center.image.url }}" class="card-img-top" alt="{{ center.name }}">
+            {% endif %}
+            <div class="card-body">
+              <h5 class="card-title">{{ center.name }}</h5>
+              <p class="card-text">{{ center.description|truncatechars:100 }}</p>
+              <p><strong>Location:</strong> {{ center.location }}</p>
+              {% if center.phone_number %}
+                <p><strong>Phone:</strong> <a href="tel:{{ center.phone_number }}">{{ center.phone_number }}</a></p>
+              {% endif %}
+              {% if center.contact_email %}
+                <p><strong>Email:</strong> <a href="mailto:{{ center.contact_email }}">{{ center.contact_email }}</a></p>
+              {% endif %}
+              {% if center.website %}
+                <a href="{{ center.website }}" class="btn btn-sm btn-outline-primary" target="_blank">Visit Website</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <p class="text-center">No rehabilitation centers available at the moment.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

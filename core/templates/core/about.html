@@ -1,0 +1,152 @@
+{% extends 'core/base.html' %}
+{% block content %}
+{% load static %}
+<!-- Hero Image -->
+<section class="py-5">
+    <div class="container">
+      <div class="position-relative rounded overflow-hidden shadow">
+        <img src="{% static 'core/images/togetherness.jpeg' %}" class="img-fluid w-100" alt="Banner Image" style="max-height: 300px; object-fit: cover;">
+        
+        <!-- Text Overlay -->
+        <div class="position-absolute top-50 start-50 translate-middle text-center text-white px-3" style="max-width: 90%;">
+          <h1 style="color:black"; class="display-5 fw-bold">Santa Africa Foundation</h1>
+          <p style="color:black" class="lead">
+            Dedicated to alcohol and substance abuse prevention and intervention in Africa.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Our Story -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-3">Our Story</h2>
+    <p>The Santa Africa Foundation was founded in 2015 by Mr Edward Kibor, a renowned addiction specialist, and Mr. Peter Karani, a community leader with personal experience of addiction. With a goal to create a holistic, culturally sensitive approach to addressing alcohol and substance abuse in Africa</p>
+    <p>Santa Africa Foundation, a non-profit organization in Africa, is an alcohol and substance abuse
+      prevention and intervention organization. Our Vision <strong> “Souls that will never walk the path of self-
+      destruction"</strong> and our Mission is <strong>“To empower community members on the right and effective
+      knowledge about alcohol and substance.”</strong>
+      Santa Africa Foundation offers help to both the afflicted (those addicted to substances abuse) and the
+      affected family members. Since its inception, Santa Africa Foundation has reached over 100,000
+      people through community and faith based outreaches, schools and colleges programs, youth forums
+      and the media programs. More than 150 addicts have been helped regain their sobriety though our
+      community-based programs. This has gone a long way in alleviating poverty, illiteracy, diseases and
+      all the other socio-economic and spiritual ills associated with addiction.</p>
+  </div>
+</section>
+
+<!-- Impact Stats -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Our Impact</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <h3 class="fw-bold">50,000+</h3>
+        <p>Individuals Reached</p>
+      </div>
+      <div class="col-md-4">
+        <h3 class="fw-bold">200+</h3>
+        <p>Communities Served</p>
+      </div>
+      <div class="col-md-4">
+        <h3 class="fw-bold">50+</h3>
+        <p>Programs Implemented</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Team -->
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Our Team</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <img src="{% static 'core/images/prof.jpeg' %}" style="max-width: 150px; height: auto;" class="rounded-circle mb-3" alt="Dr. Anya Eze">
+        <h5>Edward Kibor</h5>
+        <p class="text-muted">Founder & Executive Director</p>
+      </div>
+      <div class="col-md-4">
+        <img src="{% static 'core/images/prof.jpeg' %}" style="max-width: 150px; height: auto;" class="rounded-circle mb-3" alt="Mr. Kwame Mensah">
+        <h5>Mr. Peter Karani</h5>
+        <p class="text-muted">Co-Founder & Outreach Manager</p>
+      </div>
+      <div class="col-md-4">
+        <img src="{% static 'core/images/prof.jpeg' %}"style="max-width: 150px; height: auto;" class="rounded-circle mb-3" alt="Edward Kibor">
+        <h5>Mr. Edward Kibor</h5>
+        <p class="text-muted">Lead Counselor</p>
+      </div>
+    </div>
+    <p class="mt-4">Our team includes addiction specialists, counselors, social workers, and community health professionals dedicated to creating lasting change.</p>
+  </div>
+</section>
+
+<!-- Partnerships -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Partnerships</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <img src="{% static 'core/images/kenyan_seal.jpeg' %}" style="max-width: 150px; height: auto;" class="img-fluid rounded mb-2" alt="Ministry of Health">
+        <h6>Ministry of Health</h6>
+        <p class="text-muted">Collaboration on national health initiatives</p>
+      </div>
+
+      <div class="col-md-4">
+        <img src="{% static 'core/images/Kenya red cross Logo.jpeg' %}" style="max-width: 150px; height: auto;" class="img-fluid rounded mb-2" alt="Community Groups">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h6>Local Community Groups</h6>
+        <p class="text-muted">Grassroots program implementation</p>
+      </div>
+
+      <div class="col-md-4">
+        <img src="{% static 'core/images/NACADA.jpeg' %}" style="max-width: 150px; height: auto;" class="img-fluid rounded mb-2" alt="NACADA">
+        <h6>NACADA</h6>
+        <p class="text-muted">Collaboration in research, policy, and evaluation of addiction recovery efforts.</p>
+      </div>
+
+      <div class="col-md-4">
+        <img src="{% static 'core/images/churches_logo.jpeg' %}" style="max-width: 150px; height: auto;" class="img-fluid rounded mb-2" alt="Churches & Faith Groups">
+        <h6>Churches & Faith-Based Organizations</h6>
+        <p class="text-muted">Partnering with churches to provide spiritual guidance, counseling, and community outreach for affected individuals and families.</p>
+      </div>
+
+      <div class="col-md-4">
+        <img src="{% static 'core/images/kenyan_seal.jpeg' %}" style="max-width: 150px; height: auto;" class="img-fluid rounded mb-2" alt="Government">
+        <h6>County government</h6>
+        <p class="text-muted">We collaborate closely with the County Government to expand access to addiction prevention and treatment services at the grassroots level.</p>
+      </div>
+    </div>
+
+    <p class="mt-4">We collaborate with government bodies, communities, and faith-based organizations to broaden our impact across Africa.</p>
+  </div>
+</section>
+
+
+<!-- Our Approach -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-4 text-center">Our Approach</h2>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <h5><i class="bi bi-shield-exclamation"></i> Prevention</h5>
+        <p>Raising awareness and educating communities about alcohol and substance abuse risks.</p>
+      </div>
+      <div class="col-md-4">
+        <h5><i class="bi bi-heart-pulse"></i> Intervention</h5>
+        <p>Providing early intervention and support to individuals at risk.</p>
+      </div>
+      <div class="col-md-4">
+        <h5><i class="bi bi-hospital"></i> Treatment</h5>
+        <p>Access to evidence-based treatment and rehab services.</p>
+      </div>
+    </div>
+    <p class="mt-4 text-center">Our programs are evidence-based and tailored to the specific needs of the communities we serve.</p>
+  </div>
+</section>
+
+{% endblock %}

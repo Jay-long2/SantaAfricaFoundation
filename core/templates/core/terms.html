@@ -1,0 +1,56 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="p-4 border rounded shadow-sm" style="font-size: 0.95rem; background-color: #fff;">
+      <h1 class="fw-bold mb-4 text-center">Terms of Service</h1>
+
+      <h5>1. Who We Are</h5>
+      <p>Santa Africa Foundation is a registered nonprofit organization dedicated to preventing and addressing alcohol and substance abuse through education, community outreach, and partnerships. We operate in Kenya and serve communities across Africa.</p>
+
+      <h5>2. Use of Our Website</h5>
+      <p>By using this website, you agree to do so only for lawful purposes. You may not use the website in any way that:</p>
+      <ul>
+        <li>Violates any applicable local, national, or international law</li>
+        <li>Infringes on the rights of others</li>
+        <li>Distributes viruses or malicious software</li>
+        <li>Engages in abusive or harassing behavior</li>
+      </ul>
+
+      <h5>3. Donations</h5>
+      <p>Donations are voluntary and made through secure third-party platforms such as Paystack or M-Pesa. By donating, you agree to provide accurate information and understand that contributions are generally non-refundable.</p>
+
+      <h5>4. Content Ownership</h5>
+      <p>All content on this site, including text, images, logos, and designs, is owned by Santa Africa Foundation unless otherwise stated. Reproduction or redistribution without permission is prohibited.</p>
+
+      <h5>5. Third-Party Links</h5>
+      <p>We may include links to third-party websites. We are not responsible for the content, policies, or practices of those websites.</p>
+
+      <h5>6. Privacy</h5>
+      <p>Your privacy is important to us. Please read our <a href="{% url 'privacy' %}">Privacy Policy</a> to understand how your personal information is collected and used.</p>
+
+      <h5>7. Modifications to the Service</h5>
+      <p>We reserve the right to update, change, or discontinue any part of the website or its services at any time without notice.</p>
+
+      <h5>8. Limitation of Liability</h5>
+      <p>Santa Africa Foundation is not liable for any direct or indirect damages resulting from the use of this website or the services offered. Use of the site is at your own risk.</p>
+
+      <h5>9. Governing Law</h5>
+      <p>These terms are governed by the laws of Kenya. Any disputes shall be handled in accordance with Kenyan legal procedures.</p>
+
+      <h5>10. Contact Information</h5>
+      <p>If you have questions or concerns about these terms, contact us at:</p>
+      <address>
+        Santa Africa Foundation<br>
+        Eldoret, Uasin Gishu County, Kenya<br>
+        Email: <a href="mailto:santaafricafoundation@gmail.com">santaafricafoundation@gmail.com</a><br>
+        Phone: 0728974344
+      </address>
+
+      <div class="text-center mt-4">
+        <a href="/" class="btn btn-primary px-4">I Agree</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

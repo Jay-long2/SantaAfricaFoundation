@@ -1,0 +1,160 @@
+{% extends 'core/base.html' %}
+{% block content %}
+{% load static %}
+<!-- Hero Section -->
+<section class="py-5">
+    <div class="container">
+      <div class="position-relative rounded overflow-hidden shadow">
+        <img src="{% static 'core/images/africa_emp.jpeg' %}" class="img-fluid w-100" alt="Banner Image" style="max-height: 500px; object-fit: cover;">
+        
+        <!-- Text Overlay -->
+        <div class="position-absolute top-50 start-50 translate-middle text-center text-white px-3" style="max-width: 90%;">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>  
+          <h1 style="color: rgb(13, 17, 233); white-space: nowrap;" class="fw-bold display-5">Empowering Lives Transforming Communities</h1>
+          <p style="color: black;" class="lead mt-2">
+            The Santa Africa Foundation is dedicated to preventing and treating alcohol and substance abuse in Africa. 
+            We offer comprehensive programs and support to individuals and families affected by addiction.
+          </p>
+          <div class="mt-4">
+            <a href="{% url 'find_help' %}" class="btn btn-primary btn-lg me-2">Get Help</a>
+            <button onclick="payWithPaystack()" class="btn btn-success btn-lg">
+              <i class="bi bi-cash-coin"></i> Donate Now
+            </button>
+            
+            <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script>
+    function payWithPaystack() {
+      var handler = PaystackPop.setup({
+        key: "pk_test_50c5ec476f5bc133a2f371ef7e9d552eb82de8f1", // Your Paystack public key from backend
+        email: 'donor@example.com',
+        amount: 5000, // in kobo (i.e. 50.00 KES if using NGN)
+        currency: "KES",
+        ref: '' + Math.floor((Math.random() * 1000000000) + 1),
+        callback: function(response){
+          alert('Success. Transaction ref is ' + response.reference);
+        },
+        onClose: function(){
+          alert('Window closed');
+        }
+      });
+      handler.openIframe();
+    }
+  </script>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Impact Section -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold">Our Impact</h2>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <h3 class="fw-bold">5,000+</h3>
+        <p>Individuals Reached</p>
+        <p class="text-success">+15%</p>
+      </div>
+      <div class="col-md-4">
+        <h3 class="fw-bold">1,200+</h3>
+        <p>Families Supported</p>
+        <p class="text-success">+20%</p>
+      </div>
+      <div class="col-md-4">
+        <h3 class="fw-bold">50+</h3>
+        <p>Communities Impacted</p>
+        <p class="text-success">+10%</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Programs -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold">Key Programs</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'core/images/recovery_groups.jpeg' %}" style="max-width: 500px; height:300px;" class="card-img-top" alt="Program 1">
+          <div class="card-body">
+            <br>
+            <br>
+            <h5 class="card-title">Recovery Support Groups</h5>
+            <p class="card-text">Providing safe spaces for individuals in recovery to connect and support each other.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'core/images/comm.jpeg' %}" style="max-width: 500px; height: auto;" class="card-img-top" alt="Program 2">
+          <div class="card-body">
+            <h5 class="card-title">Community Outreach</h5>
+            <p class="card-text">Raising awareness and providing education on substance abuse prevention in communities.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'core/images/family.jpeg' %}" class="card-img-top" alt="Program 3">
+          <div class="card-body">
+            <h5 class="card-title">Family Support Services</h5>
+            <p class="card-text">Offering counseling and resources to help families cope with addiction.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Success Stories -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold">Success Stories</h2>
+    <div class="card shadow-sm p-4">
+      <div class="row g-0 align-items-center">
+        <div class="col-md-8">
+          <h5 class="card-title">From Addiction to Recovery: Michael’s Journey</h5>
+          <p class="card-text">
+            Michael, a former addict, shares his inspiring story of overcoming addiction with the help of the Santa Africa Foundation’s programs. He is now a volunteer, giving back to the community.
+          </p>
+          <a href="#" class="btn btn-outline-primary">Read More</a>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="{% static 'core/images/mic.jpeg' %}" class="img-fluid rounded-circle" alt="Michael">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter Subscription -->
+<section class="bg-light py-5 text-center">
+  <div class="container">
+    <h2 class="fw-bold">Subscribe to our newsletter</h2>
+    <p class="mb-4">Get the latest updates on our programs, events, and success stories.</p>
+    <form class="row justify-content-center">
+      <div class="col-md-6">
+        <input type="email" class="form-control mb-2" placeholder="Enter your email">
+      </div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+{% endblock %}

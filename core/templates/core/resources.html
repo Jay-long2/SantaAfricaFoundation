@@ -1,0 +1,87 @@
+{% extends 'core/base.html' %}
+{% block content %}
+{% load static %}
+
+<!-- Hero Section -->
+<section class="text-center text-white py-5 position-relative" style="background-color: #343a40;">
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+  <div class="container position-relative">
+    <h1 class="display-4 fw-bold">Resources</h1>
+    <img src="{% static 'core/images/africa_emp.jpeg' %}" class="img-fluid w-100" alt="Banner Image" style="max-height: 500px; object-fit: cover;">
+    <p class="lead">Explore helpful articles and tools for individuals affected by addiction and their loved ones.</p>
+  </div>
+</section>
+
+<!-- For Individuals -->
+<section class="py-5" style="background-color: #f8f9fa;">
+  <div class="container">
+    <h2 class="fw-bold mb-4 text-center">For Individuals Living with Addiction</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">How to Ask for Help</h5>
+            <p class="card-text">Practical tips on reaching out and starting your recovery journey.</p>
+            <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">What to Expect in Recovery</h5>
+            <p class="card-text">Learn what the recovery process involves and how to prepare yourself.</p>
+            <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Find a Support Group</h5>
+            <p class="card-text">Discover local and virtual support groups you can join for free.</p>
+            <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- For Families -->
+<section class="py-5" style="background-color: #e9ecef;">
+  <div class="container">
+    <h2 class="fw-bold mb-4 text-center">For Families and Caregivers</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">How to Support a Loved One</h5>
+            <p class="card-text">Guidance on showing support without enabling addiction.</p>
+            <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Recognizing Warning Signs</h5>
+            <p class="card-text">Understand how to spot signs of relapse or worsening addiction.</p>
+            <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Self-Care for Caregivers</h5>
+            <p class="card-text">Resources to help you manage stress and maintain your wellbeing.</p>
+            <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

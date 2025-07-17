@@ -1,0 +1,40 @@
+{% extends 'core/base.html' %}
+{% block content %}
+{% load static %}
+{% if form and form.name and form.email and form.subject and form.message %}
+
+<section class="py-5">
+  <div style="background-color: blanchedalmond;" class="container">
+    <h1 class="fw-bold mb-4 text-center">Contact Us</h1>
+
+    {% if success %}
+      <div class="alert alert-success text-center">
+        Thank you! Your message has been sent successfully.
+      </div>
+    {% endif %}
+
+    <form method="POST" class="row g-3">
+      {% csrf_token %}
+      <div class="col-md-6">
+        {{ form.name.label_tag }} {{ form.name }}
+      </div>
+      <div class="col-md-6">
+        {{ form.email.label_tag }} {{ form.email }}
+      </div>
+      <div class="col-12">
+        {{ form.subject.label_tag }} {{ form.subject }}
+      </div>
+      <div class="col-12">
+        {{ form.message.label_tag }} {{ form.message }}
+      </div>
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-primary px-4">Send Message</button>
+      </div>
+    </form>
+
+    
+  
+
+  </div>
+{% endif %}
+{% endblock %}
