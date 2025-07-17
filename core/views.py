@@ -12,7 +12,7 @@ def home(request):
             form.save()
             return redirect('home')  # or render with a success message
 
-    return render(request, 'core/home.html', {'form': form})
+    return render(request, 'core/index.html', {'form': form})
 
 
 def about(request):
